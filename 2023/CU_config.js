@@ -4,7 +4,7 @@ var config_data = `
   "page_title": "Charged Up",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
+    { "name": "Scouter",
       "code": "s",
       "type": "scouter",
       "size": 5,
@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2022carv",
+      "defaultValue": "2020ilch",
       "required": "true",
       "disabled": "true"
     },
