@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\resources\\js\\CU_config.js"
+            "program": "${workspaceFolder}\\2023\\CU_config.js"
         }
     ]
 }
