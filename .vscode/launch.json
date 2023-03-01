@@ -5,13 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\2023\\CU_config.js"
+            "name": "Launch Chrome against localhost",
+            "url": "http://oakbotics.github.io/ScoutingPASS/",
+            "webRoot": "${workspaceFolder}\\2023\\CU_config.js"
         }
     ]
 }
