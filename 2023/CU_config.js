@@ -4,7 +4,7 @@ var config_data = `
   "page_title": "Charged Up",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter",
+    { "name": "Scouter Initials",
       "code": "s",
       "type": "scouter",
       "size": 5,
@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2020ilch",
+      "defaultValue": "2019onlon",
       "required": "true",
       "disabled": "true"
     },
@@ -115,15 +115,6 @@ var config_data = `
       "showUndo": "false",
       "shape": "circle 12 black red true",
       "cycleTimer": "tct"
-    },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "type": "counter",
-      "cycleTimer": "tct"
-    },
-    { "name": "Was Fed<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
     },
     { "name": "Was Defended",
       "code": "wd",
