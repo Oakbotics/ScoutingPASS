@@ -11,12 +11,6 @@
             "type": "chrome",
             "webRoot": "${workspaceFolder}\\2023\\CU_config.js"
         },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://oakbotics.github.io/ScoutingPASS/",
-            "webRoot": "${workspaceFolder}"
-        }
+
     ]
 }
