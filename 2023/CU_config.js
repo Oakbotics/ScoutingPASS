@@ -83,17 +83,12 @@ var config_data = `
       "code": "acs",
       "type": "bool"
     },
-    { "name": "Mobility?",
-      "code": "am",
-      "type": "bool"
-    },
     { "name": "Docked",
       "code": "ad",
       "type":"radio",
       "choices": {
         "d": "Docked (not Engaged)<br>",
         "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
         "x": "Not attempted"
       },
       "defaultValue": "x"
@@ -119,10 +114,6 @@ var config_data = `
     { "name": "Was Defended",
       "code": "wd",
       "type": "bool"
-    },
-    { "name": "Who Defended this bot",
-      "code": "who",
-      "type": "text"
     },
     { "name": "Smart Placement<br>(creates Links)",
       "code": "lnk",
@@ -163,48 +154,25 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
-    { "name": "Links Scored",
-      "code": "ls",
-      "type": "counter"
-    },
     { "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
         "a": "Average<br>",
-        "g": "Good<br>",
         "e": "Excellent<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
     },
-    { "name": "Swerve drive?",
-      "code": "sd",
-      "type": "bool"
-    },
     { "name": "Speed Rating",
       "code": "sr",
       "type": "radio",
       "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
+        "1": "Slow<br>",
+        "2": "Medium<br>",
+        "3": "Fast<br>"
       },
-      "defaultValue":"3"
+      "defaultValue":"2"
     },
     { "name": "Died/Immobilized",
       "code": "die",
@@ -214,7 +182,7 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Cones (>2)",
+    { "name": "Dropped Pieces (>2)",
       "code": "dc",
       "type": "bool"
     },
@@ -223,11 +191,15 @@ var config_data = `
       "code": "all",
       "type": "bool"
     },
+    { "name": "Excessive Fouls?",
+      "code": "am",
+      "type": "bool"
+    },
     { "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 50
+      "maxSize": 100
     }
   ]
 }`;
