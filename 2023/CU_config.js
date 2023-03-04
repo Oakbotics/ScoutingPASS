@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2019onlon",
+      "defaultValue": "2023onbar",
       "required": "true",
       "disabled": "true"
     },
