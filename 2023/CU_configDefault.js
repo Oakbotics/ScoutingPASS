@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023onlon",
+      "defaultValue": "2022carv",
       "required": "true",
       "disabled": "true"
     },
@@ -83,12 +83,17 @@ var config_data = `
       "code": "acs",
       "type": "bool"
     },
+    { "name": "Mobility?",
+      "code": "am",
+      "type": "bool"
+    },
     { "name": "Docked",
       "code": "ad",
       "type":"radio",
       "choices": {
         "d": "Docked (not Engaged)<br>",
         "e": "Engaged<br>",
+        "a": "Attempted but failed<br>",
         "x": "Not attempted"
       },
       "defaultValue": "x"
@@ -111,9 +116,22 @@ var config_data = `
       "shape": "circle 12 black red true",
       "cycleTimer": "tct"
     },
+    { "name": "Feeder Count<br>(Fed another bot)",
+      "code": "tfc",
+      "type": "counter",
+      "cycleTimer": "tct"
+    },
+    { "name": "Was Fed<br>Game Pieces",
+      "code": "wf",
+      "type": "bool"
+    },
     { "name": "Was Defended",
       "code": "wd",
       "type": "bool"
+    },
+    { "name": "Who Defended this bot",
+      "code": "who",
+      "type": "text"
     },
     { "name": "Smart Placement<br>(creates Links)",
       "code": "lnk",
@@ -151,28 +169,51 @@ var config_data = `
     { "name": "Total # of alliance<br>robots docked/engaged",
       "code": "dn",
       "type": "counter"
+    },
+    { "name": "Links Scored",
+      "code": "ls",
+      "type": "counter"
     }
   ],
   "postmatch": [
+    { "name": "Driver Skill",
+      "code": "ds",
+      "type": "radio",
+      "choices": {
+        "n": "Not Effective<br>",
+        "a": "Average<br>",
+        "v": "Very Effective<br>",
+        "x": "Not Observed"
+      },
+      "defaultValue": "x"
+    },
     { "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
       "choices": {
+        "b": "Below Average<br>",
         "a": "Average<br>",
+        "g": "Good<br>",
         "e": "Excellent<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
     },
+    { "name": "Swerve drive?",
+      "code": "sd",
+      "type": "bool"
+    },
     { "name": "Speed Rating",
       "code": "sr",
       "type": "radio",
       "choices": {
-        "1": "Slow<br>",
-        "2": "Medium<br>",
-        "3": "Fast<br>"
+        "1": "1 (slow)<br>",
+        "2": "2<br>",
+        "3": "3<br>",
+        "4": "4<br>",
+        "5": "5 (fast)"
       },
-      "defaultValue":"2"
+      "defaultValue":"3"
     },
     { "name": "Died/Immobilized",
       "code": "die",
@@ -182,7 +223,7 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Dropped Pieces (>2)",
+    { "name": "Dropped Cones (>2)",
       "code": "dc",
       "type": "bool"
     },
@@ -191,15 +232,11 @@ var config_data = `
       "code": "all",
       "type": "bool"
     },
-    { "name": "Excessive Fouls?",
-      "code": "am",
-      "type": "bool"
-    },
     { "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 100
+      "maxSize": 50
     }
   ]
 }`;
