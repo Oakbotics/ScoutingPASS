@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023onlon",
+      "defaultValue": "2023oncmp2",
       "required": "true",
       "disabled": "true"
     },
